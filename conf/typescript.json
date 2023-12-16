@@ -1,0 +1,11 @@
+{
+  "devDependencies": [
+    "@tsconfig/node${nodeVersion}",
+    "@types/jest",
+    "@types/node",
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "ts-jest",
+    "typescript"
+  ]
+}

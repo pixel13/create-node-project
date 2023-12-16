@@ -1,0 +1,13 @@
+{
+  "variables": {
+    "nodeVersion": "18",
+    "esVersion": "2021"
+  },
+  "devDependencies": [
+    "eslint",
+    "eslint-config-prettier",
+    "eslint-plugin-prettier",
+    "jest",
+    "prettier"
+  ]
+}
