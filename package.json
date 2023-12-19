@@ -33,6 +33,7 @@
     "typescript": "^5.3.2"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
     "figlet": "^1.7.0",
     "inquirer": "^9.2.12",
     "latest-version": "^7.0.0",

@@ -14,17 +14,16 @@ const getSampleBasePath = (): string => {
   return path.join(fileDir, "..", "..", "samples");
 };
 
-const copySampleFiles = (sampleDir: string, projectDir: string, subDir: string, fileExt: string): void => {
+const copySampleFiles = (sampleDir: string, projectDir: string, subDir: string, fileExt?: string): void => {
   const source = path.join(sampleDir, subDir);
   const dest = path.join(projectDir, subDir);
   copyFolderContent(source, dest, fileExt);
 };
 
 const createSampleFiles = (projectDir: string, options: Options): void => {
-  const ext = options.language === "typescript" ? "ts" : "js";
-  const sampleSourcePath = path.join(getSampleBasePath(), options.projectType);
-  copySampleFiles(sampleSourcePath, projectDir, "src", ext);
-  copySampleFiles(sampleSourcePath, projectDir, "tests", ext);
+  const sampleSourcePath = path.join(getSampleBasePath(), options.projectType, options.language);
+  copySampleFiles(sampleSourcePath, projectDir, "src");
+  copySampleFiles(sampleSourcePath, projectDir, "tests");
 };
 
 export default async (options: Options) => {
@@ -41,7 +40,7 @@ export default async (options: Options) => {
 
   if (options.language === "typescript") {
     createFile(path.join(projectDir, "tsconfig.json"), createTsConfig(options));
-    createFile(path.join(projectDir, "jest.config.js"), createJestConfig());
+    createFile(path.join(projectDir, "jest.config.cjs"), createJestConfig());
   }
 
   createSampleFiles(projectDir, options);

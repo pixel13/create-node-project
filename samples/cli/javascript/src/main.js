@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import command from "./command";
+const command = require("./command");
 
 console.log(command());

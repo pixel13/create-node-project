@@ -10,6 +10,6 @@ type Defaults = {
 };
 
 const fileDir = path.dirname(fileURLToPath(import.meta.url));
-const defaultsFile = fileDir + "/../../.defaults.json";
+const defaultsFile = path.join(fileDir, "..", "..", ".defaults.json");
 
 export default (readJson(defaultsFile) || {}) as Defaults;

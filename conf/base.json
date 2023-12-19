@@ -3,6 +3,11 @@
     "nodeVersion": "18",
     "esVersion": "2021"
   },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src --ext .js,.ts",
+    "fix": "npm run lint -- --fix"
+  },
   "devDependencies": [
     "eslint",
     "eslint-config-prettier",

@@ -1,4 +1,4 @@
-import command from "../src/command";
+const command = require("../src/command");
 
 describe("CLI Command", () => {
   it("should return a string", () => {

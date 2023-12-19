@@ -46,7 +46,7 @@ export default async (options: Options): Promise<string> => {
     version: "0.0.1",
     ...(options.description && { description: options.description }),
     ...(bin && { bin }),
-    type: "module",
+    ...(options.language === "typescript" && { type: "module" }),
     ...(options.author && { author: options.author }),
     ...(options.license && { license: options.license }),
     ...(conf.scripts && { scripts: conf.scripts }),
