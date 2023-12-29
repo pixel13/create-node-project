@@ -1,6 +1,6 @@
 import { readJson } from "../utils/fileReader.js";
 import path from "path";
-import { fileURLToPath } from "url";
+import rootPath from "../utils/rootPath.js";
 
 type Defaults = {
   author?: string;
@@ -9,7 +9,6 @@ type Defaults = {
   projectType?: string;
 };
 
-const fileDir = path.dirname(fileURLToPath(import.meta.url));
-const defaultsFile = path.join(fileDir, "..", "..", ".defaults.json");
+const defaultsFile = path.join(rootPath, ".defaults.json");
 
 export default (readJson(defaultsFile) || {}) as Defaults;

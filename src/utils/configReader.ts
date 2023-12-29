@@ -2,7 +2,7 @@ import { readJson } from "./fileReader.js";
 import { Options, StringMap } from "../types/types.js";
 import _ from "lodash";
 import path from "path";
-import { fileURLToPath } from "url";
+import rootPath from "./rootPath.js";
 
 type Config = {
   variables?: StringMap;
@@ -39,8 +39,7 @@ const replaceVariables = (conf: Config): Config => {
 };
 
 export default (options: Options): Config => {
-  const fileDir = path.dirname(fileURLToPath(import.meta.url));
-  const confDir = path.join(fileDir, "..", "..", "conf");
+  const confDir = path.join(rootPath, "conf");
 
   const baseConf = readJson(path.join(confDir, "base.json")) || {};
   const languageConf = readJson(path.join(confDir, `${options.language}.json`)) || {};

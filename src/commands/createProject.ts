@@ -7,11 +7,10 @@ import createGitIgnore from "../files/gitignore.js";
 import createJestConfig from "../files/jestConfig.js";
 import { createDir, createFile, copyFolderContent } from "../utils/fileWriter.js";
 import path from "path";
-import { fileURLToPath } from "url";
+import rootPath from "../utils/rootPath.js";
 
 const getSampleBasePath = (): string => {
-  const fileDir = path.dirname(fileURLToPath(import.meta.url));
-  return path.join(fileDir, "..", "..", "samples");
+  return path.join(rootPath, "samples");
 };
 
 const copySampleFiles = (sampleDir: string, projectDir: string, subDir: string, fileExt?: string): void => {

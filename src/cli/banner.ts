@@ -10,13 +10,13 @@ const maxLineLength = (data: string) => {
   );
 };
 
-export default (title: string, smallText: string | undefined) => {
+export default (title: string, smallText?: string) => {
   const data = figlet.textSync(title, {});
   if (!smallText) {
     return data;
   }
 
   const lineLength = maxLineLength(data);
-  const padding = lineLength - smallText.length;
+  const padding = Math.max(lineLength - smallText.length, 0);
   return data + "\r\n" + " ".repeat(padding) + smallText + "\r\n";
 };

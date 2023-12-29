@@ -1,6 +1,6 @@
 import fs from "fs";
 
-export const readJson = (filePath: string): string | null => {
+export const readJson = (filePath: string) => {
   if (!fs.existsSync(filePath)) {
     return null;
   }

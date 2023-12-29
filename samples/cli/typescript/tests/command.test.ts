@@ -1,4 +1,4 @@
-import command from "../src/command.js";
+import command from "../src/command";
 
 describe("CLI Command", () => {
   it("should return a string", () => {
