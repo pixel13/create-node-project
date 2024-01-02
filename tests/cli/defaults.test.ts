@@ -18,7 +18,7 @@ const mockReader = jest.mocked({ readJson });
 
 jest.mock("../../src/utils/rootPath", () => "");
 
-describe("defaults", () => {
+describe("CLI defaults", () => {
   it("should read the JSON file containing the default values", () => {
     mockReader.readJson.mockReturnValue(DEFAULT_VALUES);
     expect(defaults).toStrictEqual(DEFAULT_VALUES);

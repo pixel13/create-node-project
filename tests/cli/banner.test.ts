@@ -7,7 +7,7 @@ const SMALL_TEXT = "Small text";
 jest.mock("figlet");
 const mockFiglet = jest.mocked(figlet);
 
-describe("banner", () => {
+describe("CLI banner", () => {
   it("should return a text banner", () => {
     mockFiglet.textSync.mockReturnValueOnce(BANNER_TEXT);
     expect(banner("Test")).toBe(BANNER_TEXT);
