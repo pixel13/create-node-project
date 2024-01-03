@@ -1,6 +1,7 @@
+import { Options } from "./../../src/types/types";
+import { options } from "../testUtils";
 import { createDir, createFile, copyFolderContent } from "../../src/utils/fileWriter";
 import createProject from "../../src/commands/createProject";
-import { Options } from "../../src/types/types";
 import path from "path";
 
 jest.mock("../../src/utils/rootPath", () => "root-folder");
@@ -21,59 +22,27 @@ describe("createProject command", () => {
   });
 
   it("should create the structure for a generic JavaScript project", async () => {
-    const options: Options = {
-      projectName: "project-name",
-      description: "project description",
-      author: "project author",
-      language: "javascript",
-      license: "MIT",
-      projectType: "generic",
-    };
-    await createProject(options);
-
-    expectCorrectProjectStructure(options);
+    const opts = options("javascript", "generic");
+    await createProject(opts);
+    expectCorrectProjectStructure(opts);
   });
 
   it("should create the structure for a CLI JavaScript project", async () => {
-    const options: Options = {
-      projectName: "project-name",
-      description: "project description",
-      author: "project author",
-      language: "javascript",
-      license: "MIT",
-      projectType: "cli",
-    };
-    await createProject(options);
-
-    expectCorrectProjectStructure(options);
+    const opts = options("javascript", "cli");
+    await createProject(opts);
+    expectCorrectProjectStructure(opts);
   });
 
   it("should create the structure for a generic TypeScript project", async () => {
-    const options: Options = {
-      projectName: "project-name",
-      description: "project description",
-      author: "project author",
-      language: "typescript",
-      license: "MIT",
-      projectType: "generic",
-    };
-    await createProject(options);
-
-    expectCorrectProjectStructure(options);
+    const opts = options("typescript", "generic");
+    await createProject(opts);
+    expectCorrectProjectStructure(opts);
   });
 
   it("should create the structure for a CLI TypeScript project", async () => {
-    const options: Options = {
-      projectName: "project-name",
-      description: "project description",
-      author: "project author",
-      language: "typescript",
-      license: "MIT",
-      projectType: "cli",
-    };
-    await createProject(options);
-
-    expectCorrectProjectStructure(options);
+    const opts = options("typescript", "generic");
+    await createProject(opts);
+    expectCorrectProjectStructure(opts);
   });
 });
 

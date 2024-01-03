@@ -84,6 +84,8 @@ For example:
 }
 ```
 
+**Please note that at least the `nodeVersion` variable must be specified for TypeScript projects.**
+
 ## Samples
 
 When the tool creates a new project, it also include a main file and at least a test file, so that you already have the basic structure of your project.

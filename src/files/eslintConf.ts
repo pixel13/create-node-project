@@ -1,7 +1,7 @@
 import { BooleanMap, Options, StringOrNumberMap } from "../types/types.js";
 import configReader from "../utils/configReader.js";
 
-type EslintConf = {
+export type EslintConf = {
   env: BooleanMap;
   extends?: string[];
   parser?: string;

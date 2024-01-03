@@ -2,7 +2,7 @@ import { Options, StringMap } from "../types/types.js";
 import latestVersion from "latest-version";
 import configReader from "../utils/configReader.js";
 
-type PackageJson = {
+export type PackageJson = {
   name: string;
   version: string;
   description?: string;

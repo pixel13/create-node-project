@@ -4,7 +4,7 @@ import _ from "lodash";
 import path from "path";
 import rootPath from "./rootPath.js";
 
-type Config = {
+export type Config = {
   variables?: StringMap;
   scripts?: StringMap;
   dependencies?: string[];
