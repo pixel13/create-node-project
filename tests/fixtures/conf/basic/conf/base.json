@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "script1": "script one",
+    "script2": "script two"
+  },
+  "dependencies": [
+    "dependency1",
+    "dependency2"
+  ],
+  "devDependencies": [
+    "devDependency1",
+    "devDependency2"
+  ]
+}

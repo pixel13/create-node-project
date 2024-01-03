@@ -1,0 +1,18 @@
+{
+  "variables": {
+    "var1": "value1",
+    "var2": "value2"
+  },
+  "scripts": {
+    "script1": "script ${var1}",
+    "script2": "script two"
+  },
+  "dependencies": [
+    "dependency1",
+    "dependency-${var2}"
+  ],
+  "devDependencies": [
+    "devDependency-${var1}",
+    "devDependency2"
+  ]
+}

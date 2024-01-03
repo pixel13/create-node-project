@@ -30,14 +30,14 @@ describe("packageJson file content creator", () => {
 
     expect(json.name).toBe(testUtils.PROJECT_NAME);
     expect(json.version).toBe("0.0.1");
-    expect(json.description).toBeUndefined;
-    expect(json.bin).toBeUndefined;
-    expect(json.type).toBeUndefined;
-    expect(json.author).toBeUndefined;
-    expect(json.license).toBeUndefined;
-    expect(json.scripts).toBeUndefined;
-    expect(json.dependencies).toBeUndefined;
-    expect(json.devDependencies).toBeUndefined;
+    expect(json.description).toBeUndefined();
+    expect(json.bin).toBeUndefined();
+    expect(json.type).toBeUndefined();
+    expect(json.author).toBeUndefined();
+    expect(json.license).toBeUndefined();
+    expect(json.scripts).toBeUndefined();
+    expect(json.dependencies).toBeUndefined();
+    expect(json.devDependencies).toBeUndefined();
   });
 
   it("should create a complete package.json content for a generic JavaScript project with full config", async () => {
@@ -50,8 +50,8 @@ describe("packageJson file content creator", () => {
     expect(json.name).toBe(testUtils.PROJECT_NAME);
     expect(json.version).toBe("0.0.1");
     expect(json.description).toBe(testUtils.PROJECT_DESCRIPTION);
-    expect(json.bin).toBeUndefined;
-    expect(json.type).toBeUndefined;
+    expect(json.bin).toBeUndefined();
+    expect(json.type).toBeUndefined();
     expect(json.author).toBe(testUtils.PROJECT_AUTHOR);
     expect(json.license).toBe(testUtils.PROJECT_LICENSE);
 
@@ -77,7 +77,7 @@ describe("packageJson file content creator", () => {
     expect(json.version).toBe("0.0.1");
     expect(json.description).toBe(testUtils.PROJECT_DESCRIPTION);
     expect(json.bin).toBe("src/main.js");
-    expect(json.type).toBeUndefined;
+    expect(json.type).toBeUndefined();
     expect(json.author).toBe(testUtils.PROJECT_AUTHOR);
     expect(json.license).toBe(testUtils.PROJECT_LICENSE);
 
@@ -104,14 +104,14 @@ describe("packageJson file content creator", () => {
 
     expect(json.name).toBe(testUtils.PROJECT_NAME);
     expect(json.version).toBe("0.0.1");
-    expect(json.description).toBeUndefined;
-    expect(json.bin).toBeUndefined;
+    expect(json.description).toBeUndefined();
+    expect(json.bin).toBeUndefined();
     expect(json.type).toBe("module");
-    expect(json.author).toBeUndefined;
-    expect(json.license).toBeUndefined;
-    expect(json.scripts).toBeUndefined;
-    expect(json.dependencies).toBeUndefined;
-    expect(json.devDependencies).toBeUndefined;
+    expect(json.author).toBeUndefined();
+    expect(json.license).toBeUndefined();
+    expect(json.scripts).toBeUndefined();
+    expect(json.dependencies).toBeUndefined();
+    expect(json.devDependencies).toBeUndefined();
   });
 
   it("should create a complete package.json content for a generic TypeScript project with full config", async () => {
@@ -124,7 +124,7 @@ describe("packageJson file content creator", () => {
     expect(json.name).toBe(testUtils.PROJECT_NAME);
     expect(json.version).toBe("0.0.1");
     expect(json.description).toBe(testUtils.PROJECT_DESCRIPTION);
-    expect(json.bin).toBeUndefined;
+    expect(json.bin).toBeUndefined();
     expect(json.type).toBe("module");
     expect(json.author).toBe(testUtils.PROJECT_AUTHOR);
     expect(json.license).toBe(testUtils.PROJECT_LICENSE);

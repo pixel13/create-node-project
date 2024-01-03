@@ -1,0 +1,16 @@
+{
+  "variables": {
+    "var2": "new-value2",
+    "var3": "value3"
+  },
+  "scripts": {
+    "script2": "script ${var2}",
+    "script3": "script ${var3}"
+  },
+  "dependencies": [
+    "dependency3"
+  ],
+  "devDependencies": [
+    "devDependency3"
+  ]
+}

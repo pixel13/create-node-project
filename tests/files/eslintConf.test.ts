@@ -24,8 +24,8 @@ describe("eslintConf file content creator", () => {
     expect(json.parserOptions?.ecmaVersion).toBe("latest");
     expect(json.parserOptions?.sourceType).toBe("module");
 
-    expect(json.parser).toBeUndefined;
-    expect(json.plugins).toBeUndefined;
+    expect(json.parser).toBeUndefined();
+    expect(json.plugins).toBeUndefined();
   });
 
   it("should create a configuration for a JavaScript project with a specific esVersion conf", () => {
@@ -50,8 +50,8 @@ describe("eslintConf file content creator", () => {
     expect(json.parserOptions?.ecmaVersion).toBe(2023);
     expect(json.parserOptions?.sourceType).toBe("module");
 
-    expect(json.parser).toBeUndefined;
-    expect(json.plugins).toBeUndefined;
+    expect(json.parser).toBeUndefined();
+    expect(json.plugins).toBeUndefined();
   });
 
   it("should create a configuration for a TypeScript project with no specific conf", () => {
