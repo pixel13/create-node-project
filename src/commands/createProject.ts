@@ -13,10 +13,10 @@ const getSampleBasePath = (): string => {
   return path.join(rootPath, "samples");
 };
 
-const copySampleFiles = (sampleDir: string, projectDir: string, subDir: string, fileExt?: string): void => {
+const copySampleFiles = (sampleDir: string, projectDir: string, subDir: string): void => {
   const source = path.join(sampleDir, subDir);
   const dest = path.join(projectDir, subDir);
-  copyFolderContent(source, dest, fileExt);
+  copyFolderContent(source, dest);
 };
 
 const createSampleFiles = (projectDir: string, options: Options): void => {

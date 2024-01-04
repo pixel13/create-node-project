@@ -84,13 +84,11 @@ function expectCorrectProjectStructure(options: Options) {
   expect(mockFileWriter.copyFolderContent).toHaveBeenCalledTimes(2);
   expect(mockFileWriter.copyFolderContent).toHaveBeenCalledWith(
     pathEndingWith("root-folder", "samples", options.projectType, options.language, "src"),
-    pathEndingWith(options.projectName, "src"),
-    undefined
+    pathEndingWith(options.projectName, "src")
   );
   expect(mockFileWriter.copyFolderContent).toHaveBeenCalledWith(
     pathEndingWith("root-folder", "samples", options.projectType, options.language, "tests"),
-    pathEndingWith(options.projectName, "tests"),
-    undefined
+    pathEndingWith(options.projectName, "tests")
   );
 }
 

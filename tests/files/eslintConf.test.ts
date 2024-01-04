@@ -14,8 +14,8 @@ describe("eslintConf file content creator", () => {
     const json: EslintConf = JSON.parse(content);
 
     expect(Object.keys(json.env)).toHaveLength(2);
-    expect(json.env.node).toBeTruthy;
-    expect(json.env.jest).toBeTruthy;
+    expect(json.env.node).toBeTruthy();
+    expect(json.env.jest).toBeTruthy();
 
     expect(json.extends).toHaveLength(1);
     expect(json.extends?.[0]).toBe("eslint:recommended");
@@ -39,9 +39,9 @@ describe("eslintConf file content creator", () => {
     const json: EslintConf = JSON.parse(content);
 
     expect(Object.keys(json.env)).toHaveLength(3);
-    expect(json.env.node).toBeTruthy;
-    expect(json.env.jest).toBeTruthy;
-    expect(json.env.es2023).toBeTruthy;
+    expect(json.env.node).toBeTruthy();
+    expect(json.env.jest).toBeTruthy();
+    expect(json.env.es2023).toBeTruthy();
 
     expect(json.extends).toHaveLength(1);
     expect(json.extends?.[0]).toBe("eslint:recommended");
@@ -61,8 +61,8 @@ describe("eslintConf file content creator", () => {
     const json: EslintConf = JSON.parse(content);
 
     expect(Object.keys(json.env)).toHaveLength(2);
-    expect(json.env.node).toBeTruthy;
-    expect(json.env.jest).toBeTruthy;
+    expect(json.env.node).toBeTruthy();
+    expect(json.env.jest).toBeTruthy();
 
     expect(json.extends).toHaveLength(2);
     expect(json.extends?.[0]).toBe("eslint:recommended");
@@ -88,9 +88,9 @@ describe("eslintConf file content creator", () => {
     const json: EslintConf = JSON.parse(content);
 
     expect(Object.keys(json.env)).toHaveLength(3);
-    expect(json.env.node).toBeTruthy;
-    expect(json.env.jest).toBeTruthy;
-    expect(json.env.es2023).toBeTruthy;
+    expect(json.env.node).toBeTruthy();
+    expect(json.env.jest).toBeTruthy();
+    expect(json.env.es2023).toBeTruthy();
 
     expect(json.extends).toHaveLength(2);
     expect(json.extends?.[0]).toBe("eslint:recommended");

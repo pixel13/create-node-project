@@ -17,11 +17,11 @@ export const createDir = (filePath: string) => {
   fs.mkdirSync(filePath);
 };
 
-export const copyFolderContent = (sourceDir: string, destDir: string, fileExt?: string) => {
+export const copyFolderContent = (sourceDir: string, destDir: string) => {
   const fileList = fs.readdirSync(sourceDir);
   fileList.forEach((fileName) => {
     const source = path.join(sourceDir, fileName);
-    const dest = path.join(destDir, fileName + (fileExt ? "." + fileExt : ""));
+    const dest = path.join(destDir, fileName);
     fs.copyFileSync(source, dest);
   });
 };
