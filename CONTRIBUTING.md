@@ -12,14 +12,14 @@ When opening an issue:
 - Make sure you are referring to the latest version
 - Check if the same issue has already been created by someone else
 - Give the issue a significant title
-- First of all, explain the bug/feature in a concise way, as clearer as possible
+- First of all, explain the bug/feature in a concise way, as clearly as possible
 - Then provide as much context as possible: if it's a bug, provide all the information to reproduce it
 - Add screenshots or other images when appropriate
 
 ## Code contribution
 
-If you want to contribute to the project code, please check if there is any unassigned [issue](https://github.com/pixel13/create-node-project/issues) you can work on. If you want to solve an unreported bug or make an enhancement to the project, please make sure to create the corresponding issue, unless it's something really trivial (e.g. typo).
+If you want to contribute to the project code, please check if there is any unassigned [issue](https://github.com/pixel13/create-node-project/issues) you can work on. If you want to solve an unreported bug or make an enhancement to the project, please make sure to create the corresponding issue, unless it's something really trivial (e.g., a typo).
 
-Before submitting your code, please make sure that it **works properly**, that all the **tests passes** and that the **code coverage** is over the threshold.
+Before submitting your code, please make sure that it **works properly**, that all the **tests pass** and that the global **code coverage** is above the threshold.
 
 When submitting your PR, please link it to the corresponding issue, if any.
